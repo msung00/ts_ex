@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced To-Do App</title>
+    <title>TypeScript To-Do App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="toast-container"></div>
 
     <div id="app-container">
         <header>
-            <h1>Advanced To-Do</h1>
+            <h1>TypeScript To-Do</h1>
         </header>
-
         <section id="todo-form-section">
             <form id="todo-form">
                 <div class="input-group">
@@ -21,20 +21,22 @@
                 <button type="submit" class="form-button">✨ 추가하기</button>
             </form>
         </section>
-
         <section id="filter-controls">
             <button class="filter-button active" data-filter="all">전체</button>
             <button class="filter-button" data-filter="active">진행 중</button>
             <button class="filter-button" data-filter="completed">완료</button>
         </section>
-        
-        <div id="loader">로딩 중...</div>
 
+        <section id="todo-summary">
+            <span id="todo-counter"></span>
+            <button id="clear-completed-button" class="utility-button">완료된 항목 삭제</button>
+        </section>
+        <div id="loader">로딩 중...</div>
         <section id="todo-list-section">
             <ul id="todo-list"></ul>
         </section>
     </div>
-
-    <script src="script.js"></script>
+    
+    <script src="./dist/script.js"></script>
 </body>
 </html>
